@@ -1,0 +1,70 @@
+/* CSS vindo do Bootstrap */
+.title_{
+	color: #732540;
+	font-family: 'Akshar', sans-serif;
+}
+h1{
+	font-family: 'Nunito', sans-serif;
+	margin-left: 2px;
+}
+body {
+  padding-bottom: 20px;
+}
+/* CSS criado para google fonts e demais estilos */
+.navbar {
+  margin-bottom: 20px;
+}
+.navbar-brand{
+	font-family: 'Grape Nuts', cursive;
+	font-size: 25px;
+}
+.container{
+	 bottom: 0;
+	 text-align: center;
+	 margin-left: 100px;
+	 max-height: 140px;
+	 margin-top: 250px;
+}
+p{
+	margin-left: 5px;
+	text-align: justify;
+}
+select{
+	margin-left: 5px;
+}
+button[type=button]{
+	background-color: black;
+	color: white;
+	border-style: outset;
+	border-color: black;
+	height: 50px;
+	width: 100px;
+	font: Helvetica, sans-serif;
+	text-shadow:none;
+	font-size: 14px;
+	margin-left: 5px;
+}
+input[type=button]{
+	background-color: black;
+	color: white;
+	border-style: outset;
+	border-color: black;
+	height: 50px;
+	width: 100px;
+	font: Helvetica, sans-serif;
+	text-shadow:none;
+	font-size: 14px;
+	margin-left: 5px;
+}
+button{
+	background-color: black;
+	color: white;
+	border-style: outset;
+	border-color: black;
+	height: 50px;
+	width: 100px;
+	font: Helvetica, sans-serif;
+	text-shadow:none;
+	font-size: 14px;
+	margin-left: 5px;
+}
