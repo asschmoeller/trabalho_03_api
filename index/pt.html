@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bíblia Online</title>
+    <!-- Link do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Link para conectar com Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link para usar o estilo do Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Link do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- Link CSS do Bootstrap -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link JS do Bootstrap -->
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Style vindo do Bootstrap -->
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+    <!-- Link do CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body onload="iniciar()">
+<!-- NAV --> 
+<main>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html">Bíblia Online</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-white bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="pt.html">Português</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="en.html">English</a>
+            </li>
+          </ul>
+          <form class="d-flex mt-3 mt-lg-0" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+</main>
+<!-- Conteúdo -->
+<h1>Bíblia</h1>
+        <p> Selecione o Livro:
+		<select id="livro">
+      <option value="joao"> João</option>
+      <option value="romanos"> Romanos</option>
+    </select>
+    <button type="button" onclick="escolha_livro();">Ok</button>
+    <br>
+    <div id="div_joao">
+      <select id="escolha_joao">
+			  <option value="João+3:16?translation=almeida">João 3:16</option>
+		  </select>
+    <button type="button" onclick="livro_joao();">Ok</button>
+    <br>
+    <br>
+    <p id="p_01"> </p>
+    </div>
+
+    <div id="div_romanos">
+      <select id="escolha_romanos">
+        <option value="romans+12:1-2?translation=almeida">Romanos 12:1-2</option>
+        <option value="romans%205-7?translation=almeida">Romanos 12:5-7</option>
+        <option value="romans%209?translation=almeida">Romanos 12:9</option>
+        <option value="romans%2013:1?translation=almeida">Romanos 12:13</option>
+        <option value="romans9&10?translation=almeida">Romanos 9 e 10</option>
+      </select>
+        <button type="button" onclick="livro_romanos();">Ok</button>
+		    <p id="p_02"> </p>
+    </div>
+<!-- Footer-->
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
+    <img class="mb-4" src="biblia.jpg" alt="" width="72" height="57">
+    
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="home.html" class="nav-link px-2 text-muted">Home</a></li>
+    </ul>
+  </footer>
+</div>
+</body>
+</html>
